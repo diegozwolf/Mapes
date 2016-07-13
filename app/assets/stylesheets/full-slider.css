@@ -1,0 +1,148 @@
+/*!
+ * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html,
+body {
+    height: 100%;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+.navbar-inverse {
+    background-color: #FF4A51;    
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #9A1B1B;
+}
+.navbar-inverse .navbar-brand {
+    color: #FFFFFF;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFFEFE;
+}
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #F7F5F5;
+}
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+ .One {
+    background-image:url('taller.jpg');
+}
+ .Two {
+    background-image:url('grupos.jpg');
+}
+ .Trhee {
+    background-image:url('austra.jpg');                     
+}
+ 
+.imgbrand{
+    width: 35%;
+    margin-bottom: 5%;
+}
+.jumbotron {    
+    background-color: rgba(214, 59, 66, 0.54);
+    border-radius: 10px;
+    color: inherit;  
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;      
+}
+.btn-default {
+    color: #FBF8F8;
+    background-color: #D01D1D;
+    border-color: #ccc;
+}
+.btn-default:hover {
+    color: #F5F3F3;
+    background-color: #9A1B1B;
+    border-color: #adadad;
+}
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    font-size: 80px;
+}
+.suscribete{
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-style: bold;         
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #D01D1D;
+}
+footer {
+    margin: 50px 0;
+}
+@media only screen and (max-width: 1080px) {    
+    .navbar-form .navbar-left{
+        display: inline; 
+        width: 100%;
+        margin: 2%;
+        }
+    } 
+@media only screen and (max-width: 1000px) {    
+    .navbar > .container .navbar-brand,
+     .navbar > .container-fluid .navbar-brand {
+        margin-left: -15px;
+        display: inline;
+        }
+    } 
+
+@media only screen and (max-width: 900px) {
+    .imgbrand{
+    width: 50%;
+    }
+    
+}
+@media only screen and (max-width: 400px) {
+    .imgbrand{
+    width: 70%;
+    margin: 10% 20%;
+    }
+    .navbar-form .navbar-left{
+        display: inline; 
+        width: 100%;
+        margin: 2%;
+    } 
+}

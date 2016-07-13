@@ -1,0 +1,52 @@
+<!--formulario: ruta, metodo-->
+<!-- para ver formulario http://localhost:3000/users/new-->
+<%= form_tag("/users",method: "post", class: "form")do %>
+<!-- para tipo de usuario-->
+<%= hidden_field_tag(:type, "ciudad")%>
+
+<!--Datos Basicos-->
+<%= text_field_tag(:name, "", placeholder: "Nombre completo")%>
+<%= text_field_tag(:email, "", placeholder: "Correo electrónico")%>
+<%= text_field_tag(:city, "", placeholder: "Ciudad")%>
+<%= text_field_tag(:password, "", placeholder: "Contraseña")%>
+
+<!--Ciudad-->
+<%= label_tag(:skill, "habilidad principal") %>
+<%= select_tag(:skill, options_for_select([["Gestión", "gestion"], ["marketing y ventas", "marketing y ventas"], ["Producción", "produccion"], ["Finanzas", "finanzas"], ["Recursos Humanos", "recursos humanos"], ["Comunicaciónes y diseño", "comunicaciones y diseño"], ["Logística y distribución", "logistica y distribucion"]]) )%>
+
+<%= label_tag(:skill, "habilidades secundarias") %>
+<%= select_tag(:skill, options_for_select([["Gestión", "gestion"], ["marketing y ventas", "marketing y ventas"], ["Producción", "produccion"], ["Finanzas", "finanzas"], ["Recursos Humanos", "recursos humanos"], ["Comunicaciónes y diseño", "comunicaciones y diseño"], ["Logística y distribución", "logistica y distribucion"]]) )%>
+
+<%= select_tag(:skills, options_for_select(["Gestión", "marketing y ventas", "Producción", "Finanzas", "Recursos Humanos", "Comunicaciónes y diseño", "Logística y distribución"])) %>
+<%= text_field_tag(:skills, "", placeholder: "Habilidades secundarias") %>
+<%= text_field_tag(:expectation, "", placeholder: "Expectativa") %>
+<%= text_area_tag(:expectation_reason, "", placeholder: "¿Por qué tiene esta expectativa?") %>
+<%= label_tag(:ocupation, "Ocupación") %>
+<%= select_tag(:ocupation, options_for_select([["Estudiante", "estudiante"],["emprendedor", "emprendedor"], ["Trabajador", "trabajador"], ["pensionado", "pensionado"], ["desempleado", "desempleado"]])) %>
+<%= text_area_tag(:observations, "", placeholder: "Observaciones") %>
+
+<!--Comunidad-->
+<%= text_field_tag(:leader_name, "", placeholder: "Nombre del líder del emprendimiento")%>
+<%= text_field_tag(:leader_email, "", placeholder: "Correo electrónico")%>
+<%= label_tag(:poblation, "Tipo de población especial") %>
+<%= select_tag(:poblation, options_for_select([["No aplica", "no aplica"], ["Madre cabeza de hogar", "madre cabeza de hogar"], ["Desplazado", "desplazado"], ["Desmovilizado", "desmovilizado"], ["Indigena", "indigena"], ["Limitación física o mental", "limitación física o mental"], ["Tercera Edad", "tercera Edad"]["Jovenes", "jovenes"] ["LGTBI", "lgtbi"]]) )%>
+<%= label_tag(:sector, "sector del emprendimiento") %>
+<%= select_tag(:sector, options_for_select([["Accsesorios", "accsesorios"], ["Alimentos", "alimentos"], ["Artesanías", "artesanias"], ["Calzado", "calzado"], ["Confeciones", "confeciones"], ["Construcción", "construccion"], ["Educación", "educacion"]["Materias primas", "materias primas"] ["Procesos productivos", "procesos productivos"]["Reciclaje", "reciclaje"]["Servicios personales", "servicios personales"]["Otros", "otros"]]) )%>
+<%= text_field_tag(:product_focus, "", placeholder: "producto principal")%>
+
+
+t.string :sector
+t.string :product_focus
+t.string :level
+t.string :need
+t.string :needs
+t.string :need_description
+<%= submit_tag("Registrarse") %>
+<% end%>
+<% if @user && @user.errors.count > 0 %>
+	<ul>
+		<% @user.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+		<% end %>
+	</ul>
+<% end %>
